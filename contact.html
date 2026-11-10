@@ -1,43 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>인터넷활용 실습 템플릿</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>이름: 최유민</h1>
-  <p class="subtitle">한 줄 소개: 인활 A+ 받고싶어요ㅠ</p>
-</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-</nav>
-<main class="container">
-<section>
-  <h2>Contact</h2>
-  <ul>
-    <li>이메일: (여기에 추가)</li>
-    <li>GitHub: (여기에 추가)</li>
-    <li>기타 링크(블로그/노션 등): (여기에 추가)</li>
-  </ul>
-  <!-- 아래는 정말 기본 예시 폼입니다. JS 없이도 동작하지 않아도 되며, 형태만 제공합니다. -->
-  <form class="contact-form" onsubmit="return false;">
-    <label>이름</label>
-    <input type="text" placeholder="이름을 입력하세요">
-    <label>메시지</label>
-    <textarea rows="4" placeholder="메시지를 입력하세요"></textarea>
-    <button type="submit">보내기 (동작X, 형태만)</button>
-  </form>
-</section>
-</main>
-<footer>
-  <small>&copy; <span id="year"></span> 이름: 최유민</small>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="광운대학교 정보융합학부 학생 최유민의 개발 및 보안 포트폴리오"><title>Contact | 최유민 · Midnight Aurora</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<div class="site-shell"><nav class="topbar" aria-label="주 메뉴"><a class="brand" href="index.html"><span class="brand-symbol">✳</span> YUMIN<span class="brand-dot">.</span></a><div class="nav-links"><a href="index.html" class="" >Home</a>
+<a href="about.html" class="" >About</a>
+<a href="portfolio.html" class="" >Portfolio</a>
+<a href="contact.html" class="active" aria-current="page">Contact</a></div><button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button></nav>
+<header class="page-heading"><div class="eyebrow"><span class="pulse"></span>OPEN TO NEW IDEAS</div><h1>Let’s <span class="gradient-text">connect.</span></h1><p class="lead">흥미로운 아이디어는 작은 대화에서 시작된다고 생각합니다.</p></header>
+<main id="main-content"><section class="two-col"><article class="glass content-card"><span class="tiny-label">LET'S CONNECT</span><h2>함께 이야기해요.</h2><p>개발, 보안, 데이터와 관련된 프로젝트나 새로운 아이디어를 나누는 데 관심이 있습니다.</p><div class="contact-method"><span class="contact-symbol">⌘</span><div><small>GitHub · 팀 프로젝트 저장소</small><a href="https://github.com/2026-KW-HACKATHON/16_HmnW" target="_blank" rel="noopener noreferrer">16_HmnW ↗</a></div></div><div class="contact-method"><span class="contact-symbol">✉</span><div><small>이메일</small><span class="muted">이메일 주소 미등록</span></div></div><p class="fine-print">개인 이메일 주소는 임의로 기재하지 않았습니다. 공개할 주소가 있다면 아래 코드의 안내 문구를 교체해 주세요.</p></article><article class="glass content-card"><span class="tiny-label">MESSAGE PREVIEW</span><h2>메시지 초안 만들기</h2><p class="muted">이 양식은 서버로 전송되지 않습니다. 입력한 내용을 복사하는 데 사용합니다.</p><form id="contact-form" class="contact-form"><label for="visitor-name">이름</label><input id="visitor-name" name="name" type="text" required maxlength="80" placeholder="이름을 입력하세요"><label for="visitor-message">메시지</label><textarea id="visitor-message" name="message" rows="5" required maxlength="2000" placeholder="전하고 싶은 이야기를 적어주세요"></textarea><button class="btn primary" type="submit">메시지 복사하기 ↗</button><p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p></form></article></section></main>
+<footer><div><strong>YUMIN<span class="brand-dot">.</span></strong> <span>Building, learning, exploring.</span></div><small>© <span id="year">2026</span> 최유민 · Made with HTML, CSS & JavaScript</small></footer></div><script src="script.js"></script></body></html>
