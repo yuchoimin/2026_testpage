@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>식사 랜덤 뽑기 | 최유민 · Midnight Aurora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="practice.css">
+  <script src="practice.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="site-shell">
+    <nav class="topbar" aria-label="주 메뉴">
+      <a class="brand" href="index.html"><span class="brand-symbol">✳</span> YUMIN<span class="brand-dot">.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+    </nav>
+
+    <header class="page-heading practice-heading">
+      <a class="text-link" href="portfolio.html#practice-heading">← 11주차 실습 목록</a>
+      <h1>식사 <span class="gradient-text">랜덤 뽑기</span></h1>
+      <p class="lead">메뉴 후보를 적고 오늘 먹을 메뉴를 뽑아보세요.</p>
+    </header>
+
+    <main class="practice-grid" id="main-content">
+      <section class="glass practice-panel" aria-labelledby="settings-heading">
+        <h2 id="settings-heading">메뉴 후보</h2>
+        <form class="practice-form" id="candidate-form">
+          <label for="candidate-input">후보 추가</label>
+          <div class="practice-controls">
+            <input type="text" id="candidate-input" placeholder="예: 김밥, 떡볶이" aria-describedby="candidate-help" required>
+            <button class="btn secondary" type="submit">추가</button>
+          </div>
+          <p class="practice-help" id="candidate-help">쉼표로 나누면 여러 후보를 한 번에 추가할 수 있어요.</p>
+        </form>
+        <p class="candidate-heading" id="candidate-count">후보 0개</p>
+        <ul class="candidate-list" id="candidate-list" aria-label="뽑기 후보"></ul>
+        <button class="btn primary" id="draw-button" type="button" disabled>메뉴 뽑기</button>
+      </section>
+      <section class="glass practice-panel practice-result" aria-labelledby="result-heading">
+        <h2 id="result-heading">실행 결과</h2>
+        <div role="status" aria-atomic="true">
+          <script>
+            const candidateText = prompt('메뉴를 쉼표(,)로 구분해 입력하세요.', '짜장면,짬뽕,제육볶음');
+            const candidates = splitCandidates(candidateText || '');
+            const selectedIndex = candidates.length ? randomIndex(candidates) : -1;
+            const initialDraw = candidates.length
+              ? drawResult(candidates[selectedIndex])
+              : { value: '뽑기 취소', detail: '후보를 추가하면 다시 뽑을 수 있어요.' };
+            writeInitialResult(initialDraw);
+            mountRandom(candidates, selectedIndex);
+          </script>
+          <noscript>JavaScript를 켜면 결과를 확인할 수 있어요.</noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>YUMIN<span class="brand-dot">.</span></strong> <span>Building, learning, exploring.</span></div>
+      <small>© <span id="year">2026</span> 최유민 · Made with HTML, CSS &amp; JavaScript</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* 9주차 Midnight Aurora의 색상 변수와 카드, 버튼을 그대로 사용합니다. */
+.practice-heading {
+  padding-bottom: 34px;
+}
+
+.practice-heading h1 {
+  font-size: clamp(2.45rem, 6vw, 4.75rem);
+  margin-top: 12px;
+  letter-spacing: -.055em;
+}
+
+.practice-heading .lead {
+  margin-bottom: 0;
+  word-break: keep-all;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.practice-panel {
+  min-width: 0;
+  padding: clamp(20px, 4vw, 36px);
+}
+
+.practice-panel h2,
+.practice-links h3 {
+  margin: 0 0 8px;
+  letter-spacing: -.03em;
+}
+
+.practice-panel p,
+.practice-links p {
+  color: var(--muted);
+}
+
+.practice-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.practice-controls {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.practice-controls input {
+  min-width: 0;
+  flex: 1 1 12rem;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  color-scheme: dark;
+}
+
+.practice-controls .btn {
+  white-space: nowrap;
+}
+
+.practice-help {
+  margin: 9px 0 0;
+  font-size: .84rem;
+  word-break: keep-all;
+}
+
+.practice-result {
+  min-height: 240px;
+  display: grid;
+  align-content: center;
+  background:
+    radial-gradient(ellipse at 96% 0%, rgba(105, 224, 206, .11), transparent 64%),
+    var(--panel);
+}
+
+.practice-result h2 {
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.practice-value {
+  display: block;
+  color: var(--primary);
+  font-size: clamp(2rem, 6vw, 4.2rem);
+  line-height: 1.13;
+  letter-spacing: -.045em;
+  overflow-wrap: anywhere;
+}
+
+.practice-detail {
+  margin: 10px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.candidate-heading {
+  margin: 25px 0 9px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.candidate-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.candidate-list:empty {
+  display: none;
+}
+
+.candidate-list li {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--bg);
+  padding-left: 12px;
+  font-size: .86rem;
+}
+
+.candidate-list li.chosen {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.candidate-list span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.candidate-list button {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.candidate-list button:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, .09);
+}
+
+.practice-panel .btn:disabled {
+  opacity: .5;
+  cursor: default;
+  transform: none;
+}
+
+.practice-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.practice-links li {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  padding: clamp(20px, 4vw, 30px);
+}
+
+.practice-links p {
+  margin: 0 0 16px;
+}
+
+.practice-links a {
+  margin-top: auto;
+}
+
+@media (max-width: 720px) {
+  .practice-grid,
+  .practice-links {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .practice-result {
+    min-height: 185px;
+  }
+}
+
+@media (max-width: 560px) {
+  footer strong .brand-dot,
+  footer small #year {
+    display: inline;
+  }
+}
